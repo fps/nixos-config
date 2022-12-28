@@ -1,0 +1,29 @@
+{ config, options, pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    wget
+    bc
+    htop
+    iotop
+    tmux
+    killall
+    bash-completion
+    nix-bash-completion
+    cryptsetup
+    pciutils
+    borgbackup
+    unzip
+    unrar
+    zip
+    rar
+    vim
+    emacs
+    links2
+    mplayer
+    jq
+    syncthing
+    usbutils
+    git
+    gdb
+  ];
+} 
