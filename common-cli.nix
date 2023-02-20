@@ -8,7 +8,6 @@
     tmux
     killall
     bash-completion
-    nix-bash-completion
     cryptsetup
     pciutils
     borgbackup
@@ -25,5 +24,6 @@
     usbutils
     git
     gdb
+    stress
   ];
 } 
