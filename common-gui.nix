@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     arandr
+    dmenu
     xclip
     kate
     firefox
@@ -11,5 +12,7 @@
     alsaTools
     alsaUtils
     keepassxc
+    xfce.xfce4-terminal
+    lxterminal
   ];
 } 
