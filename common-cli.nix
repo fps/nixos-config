@@ -1,30 +1,45 @@
 { config, options, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    wget
-    bc
     htop
     iotop
-    tmux
+    schedtools
     killall
-    bash-completion
-    cryptsetup
+
     pciutils
-    borgbackup
+    usbutils
+    stress
+
+    vim
+    emacs
+
+    man-pages
+    man-pages-posix
+
+    git
+    gdb
+
     unzip
     unrar
     zip
     rar
-    vim
-    emacs
+
+    wget
     links2
-    mplayer
+
+    bc
     jq
-    syncthing
-    usbutils
-    git
-    gdb
-    stress
+
     octaveFull
+    python3
+
+    tmux
+    bash-completion
+
+    cryptsetup
+    borgbackup
+    syncthing
+
+    mplayer
   ];
 } 
