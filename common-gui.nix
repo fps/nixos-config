@@ -10,6 +10,8 @@
     firefox
     thunderbird
 
+    signal-desktop
+
     vlc
 
     keepassxc
