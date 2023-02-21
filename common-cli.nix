@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     htop
     iotop
-    schedtools
+    schedtool
     killall
     psmisc
 
