@@ -5,10 +5,12 @@
     iotop
     schedtools
     killall
+    psmisc
 
     pciutils
     usbutils
     stress
+    lm_sensors
 
     vim
     emacs
@@ -26,6 +28,7 @@
 
     wget
     links2
+    wirelesstools
 
     bc
     jq
