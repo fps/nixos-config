@@ -6,6 +6,7 @@
     schedtool
     killall
     psmisc
+    powertop
 
     pciutils
     usbutils
