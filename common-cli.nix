@@ -23,7 +23,6 @@
     gdb
 
     unzip
-    unrar
     zip
     rar
 
