@@ -1,6 +1,9 @@
 { config, options, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    parted
+    gparted
+
     htop
     iotop
     schedtool
