@@ -37,6 +37,7 @@
     jq
 
     octaveFull
+    gnuplot
     python3
 
     tmux
