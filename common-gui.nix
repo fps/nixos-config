@@ -23,6 +23,8 @@
     pavucontrol
     alsaTools
     alsaUtils
+
+    slic3r
   ];
 
   services.xserver.enable = true;
