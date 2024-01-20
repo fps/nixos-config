@@ -27,8 +27,8 @@
     slic3r
   ];
 
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   services.xserver.windowManager.i3.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
   services.xserver.libinput.enable = true;
 } 

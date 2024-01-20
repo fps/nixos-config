@@ -1,0 +1,9 @@
+[submodule "rtnix"]
+	path = rtnix
+	url = git@github.com:fps/rtnix
+[submodule "make-nixos-fast-again"]
+	path = make-nixos-fast-again
+	url = git@github.com:fps/make-nixos-fast-again
+[submodule "0vpn"]
+	path = 0vpn
+	url = git@github.com:fps/0vpn

@@ -48,5 +48,8 @@
     syncthing
 
     mplayer
+
+    jack2
+    jack-example-tools
   ];
 } 
