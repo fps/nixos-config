@@ -5,6 +5,10 @@
 
   imports =
   [
+    ./rtnix
+    ./make-nixos-fast-again
+    ./0vpn
+
     ./common-cli.nix
     ./common-gui.nix
   ];
