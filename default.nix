@@ -1,19 +1,15 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 { 
-  nixpkgs.config.allowUnfree = true;
-
   imports =
   [
     ./rtnix
     ./make-nixos-fast-again
     ./0vpn
 
-    ./common-cli.nix
-    ./common-gui.nix
+    ./cli.nix
+    ./gui.nix
   ];
 
-  nixpkgs.overlays = [
-  ];
-}
-
+  nixpkgs.config.allowUnfree = true;
+} 
