@@ -14,7 +14,7 @@
 
     environment.systemPackages = with pkgs; 
       (lib.mkIf config.cli.enable [
-        parted gparted
+        parted 
     
         htop iotop schedtool killall psmisc powertop
     

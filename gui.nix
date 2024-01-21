@@ -15,6 +15,8 @@
     environment.systemPackages = with pkgs; 
       (lib.mkIf config.gui.enable [
         arandr dmenu xclip
+
+        gparted
     
         kate
     
