@@ -7,6 +7,7 @@
     services.openssh.enable = true;
 
     sound.enable = true;
+    rtnix.enable = true;
 
     zerovpn = {
       client = {

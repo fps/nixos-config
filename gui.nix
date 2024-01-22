@@ -30,7 +30,7 @@
     
         xfce.xfce4-terminal lxterminal
     
-        pavucontrol alsaTools alsaUtils
+        pavucontrol alsaTools alsaUtils ardour
     
         slic3r
       ]);
