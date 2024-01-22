@@ -7,6 +7,14 @@
     services.openssh.enable = true;
 
     sound.enable = true;
+
+    zerovpn = {
+      client = {
+        enable = true;
+        serverName = "contabo";
+      };
+      serverHost = "dfdx.eu";
+    };
     
     system.copySystemConfiguration = true;
   };
