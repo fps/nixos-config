@@ -39,6 +39,8 @@
         cryptsetup borgbackup syncthing
     
         mplayer jack2 jack-example-tools
+
+        zerovpn
       ]);
   };
 } 

@@ -9,6 +9,8 @@
 
     ./cli.nix
     ./gui.nix
+    ./users.nix
+    ./common.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
