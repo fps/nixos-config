@@ -3,7 +3,7 @@
   config = {
     users.users.fps = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "realtime" "networkmanager" ]; 
+      extraGroups = [ "wheel" "realtime" "networkmanager" "audio" ]; 
     };
   };
 }
