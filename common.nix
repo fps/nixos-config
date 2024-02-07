@@ -13,8 +13,8 @@
     zerovpn = {
       client = {
         enable = true;
-        serverName = "contabo";
       };
+      serverName = "contabo";
       serverHost = "dfdx.eu";
     };
     
