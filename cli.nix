@@ -4,7 +4,7 @@
   options.cli = {
     enable = lib.mkOption {
       type = lib.types.bool;
-      default = true;
+      default = false;
     };
   };
 
@@ -16,15 +16,13 @@
       (lib.mkIf config.cli.enable [
         parted 
     
-        htop iotop schedtool killall psmisc powertop
+        schedtool powertop
     
         pciutils usbutils stress lm_sensors
     
-        vim emacs
+        emacs
     
-        man-pages man-pages-posix
-    
-        git gdb
+        gdb
     
         unzip zip rar
     
@@ -33,8 +31,6 @@
         bc jq
     
         octaveFull gnuplot python3
-    
-        tmux bash-completion
     
         cryptsetup borgbackup syncthing
     

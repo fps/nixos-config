@@ -9,14 +9,6 @@
 
     sound.enable = true;
     rtnix.enable = true;
-
-    zerovpn = {
-      client = {
-        enable = true;
-      };
-      serverName = "contabo";
-      serverHost = "dfdx.eu";
-    };
     
     system.copySystemConfiguration = true;
   };

@@ -8,6 +8,7 @@
     ./0vpn
 
     ./cli.nix
+    ./cli_essentials.nix
     ./gui.nix
     ./users.nix
     ./common.nix
