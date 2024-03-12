@@ -13,26 +13,29 @@
     nixpkgs.overlays = [ ];
 
     environment.systemPackages = with pkgs; 
-      (lib.mkIf config.cli.enable [
+      (lib.mkIf config.nixos-config.cli.enable [
         parted 
-    
-        schedtool powertop
-    
-        pciutils usbutils stress lm_sensors
-    
+        schedtool 
+        powertop
+        pciutils 
+        usbutils 
+        stress 
+        lm_sensors
         emacs
-    
         gdb
-    
-        unzip zip rar
-    
-        wget links2 wirelesstools
-    
-        bc jq
-    
-        octaveFull gnuplot python3
-    
-        cryptsetup borgbackup syncthing
+        unzip 
+        zip 
+        rar
+        wget 
+        links2 
+        wirelesstools
+        bc 
+        jq
+        octaveFull 
+        gnuplot python3
+        cryptsetup 
+        borgbackup 
+        syncthing
       ]);
   };
 } 

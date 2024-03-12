@@ -11,8 +11,14 @@
   config = {
     rtnix.enable = true;
     environment.systemPackages = with pkgs; 
-      (lib.mkIf config.cli.enable [
-        mplayer jack2 jack-example-tools
+      (lib.mkIf config.nixos-config.sound.enable [
+        mplayer 
+        jack2 
+        jack-example-tools
+        pavucontrol
+        alsaTools
+        alsaUtils
+        ardour
       ]);
   };
 } 

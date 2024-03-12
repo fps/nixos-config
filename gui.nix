@@ -13,31 +13,25 @@
     nixpkgs.overlays = [ ];
 
     environment.systemPackages = with pkgs; 
-      (lib.mkIf config.gui.enable [
-        arandr dmenu xclip
-
+      (lib.mkIf config.nixos-config.gui.enable [
+        arandr 
+        dmenu 
+				xclip
         gparted
-    
-        kate
-    
-        firefox thunderbird chromium
-    
+	      kate
+        firefox 
+				thunderbird 
         signal-desktop
-    
         vlc
-    
         keepassxc
-    
-        xfce.xfce4-terminal lxterminal
-    
-        pavucontrol alsaTools alsaUtils ardour
-    
+        xfce.xfce4-terminal 
+				lxterminal
         slic3r
       ]);
 
-    services.xserver.enable = config.gui.enable;
-    services.xserver.windowManager.i3.enable = config.gui.enable;
-    services.xserver.displayManager.sddm.enable = config.gui.enable;
-    services.xserver.libinput.enable = config.gui.enable;
+    services.xserver.enable = config.nixos-config.gui.enable;
+    services.xserver.windowManager.i3.enable = config.nixos-config.gui.enable;
+    services.xserver.displayManager.sddm.enable = config.nixos-config.gui.enable;
+    services.xserver.libinput.enable = config.nixos-config.gui.enable;
   };
 } 
