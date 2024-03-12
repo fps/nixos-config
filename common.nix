@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
   config = {
     boot.loader.timeout = 1;
@@ -11,5 +11,9 @@
     rtnix.enable = true;
     
     system.copySystemConfiguration = true;
+
+    environment.systemPackages = with pkgs; [
+      zerovpn vim
+    ];
   };
 }

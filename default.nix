@@ -12,6 +12,7 @@
     ./gui.nix
     ./users.nix
     ./common.nix
+    ./sound.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

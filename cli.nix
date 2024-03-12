@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 { 
-  options.cli = {
+  options.nixos-config.cli = {
     enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -33,10 +33,6 @@
         octaveFull gnuplot python3
     
         cryptsetup borgbackup syncthing
-    
-        mplayer jack2 jack-example-tools
-
-        zerovpn
       ]);
   };
 } 

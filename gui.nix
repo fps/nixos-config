@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 { 
-  options.gui = {
+  options.nixos-config.gui = {
     enable = lib.mkOption {
       type = lib.types.bool;
       default = false;

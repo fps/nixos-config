@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 { 
-  options.cli_essentials = { 
+  options.nixos-config.cli_essentials = { 
     enable = lib.mkOption {
       type = lib.types.bool;
       default = true;
