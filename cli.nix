@@ -23,6 +23,7 @@
         lm_sensors
         emacs
         gdb
+        valgrind
         unzip 
         zip 
         rar
