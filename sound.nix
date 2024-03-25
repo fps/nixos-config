@@ -30,6 +30,7 @@ let
     # bollie-delay
     guitarix
     fixed-ir-Kalthallen-lv2
+    tacklebox-lv2
     # melmatcheq-lv2
   ];
 
@@ -55,7 +56,6 @@ let
     a2jmidid
     lilv
     fixed-ir-lv2
-    tacklebox-lv2
   ];
 in
   { 
