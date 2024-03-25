@@ -29,6 +29,7 @@ let
     ams-lv2
     # bollie-delay
     guitarix
+    fixed-ir-Kalthallen-lv2
     # melmatcheq-lv2
   ];
 

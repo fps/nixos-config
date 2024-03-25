@@ -19,6 +19,7 @@
   nixpkgs.overlays = [
     (self: super: {
       fixed-ir-lv2 = (pkgs.callPackage ./pkgs/sound/fixed-ir-lv2.nix {});
+      fixed-ir-Kalthallen-lv2 = (pkgs.callPackage ./pkgs/sound/fixed-ir-Kalthallen-lv2.nix {});
     })
   ];
 } 
