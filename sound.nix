@@ -55,6 +55,7 @@ let
     a2jmidid
     lilv
     fixed-ir-lv2
+    tacklebox-lv2
   ];
 in
   { 
