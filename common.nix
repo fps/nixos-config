@@ -23,5 +23,7 @@
       bash-completion 
       tmux
     ];
+
+    nix.settings.tarball-ttl = 60;
   };
 }
