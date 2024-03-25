@@ -53,6 +53,7 @@ let
     audacity
     a2jmidid
     lilv
+    fixed-ir-lv2
   ];
 in
   { 
