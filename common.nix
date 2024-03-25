@@ -4,6 +4,7 @@
     boot.loader.timeout = 1;
     networking.networkmanager.enable = true;
     networking.useDHCP = false;
+
     services.openssh.enable = true;
 
     system.copySystemConfiguration = true;
