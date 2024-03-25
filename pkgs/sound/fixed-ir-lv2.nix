@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
 
   src = builtins.fetchGit {
     url = https://github.com/fps/fixed-ir.lv2;
-    ref = "master";
+    rev = "b05365b37f7f44476dc09255ff3be1b5bab5cce6";
   };
 
   doCheck = false;
