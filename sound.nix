@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  plugin_packages = with pkgs; [
+  lv2_plugin_packages = with pkgs; [
     mda_lv2
     swh_lv2
     aether-lv2
@@ -31,9 +31,30 @@ let
     guitarix
     # melmatcheq-lv2
   ];
-    plugin_packages_lv2_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach plugin_packages (x: "${x}/lib/lv2")));
 
- in
+  plugin_packages_lv2_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/lv2")));
+
+  ladspa_plugin_packages = with pkgs; [
+    caps
+  ];
+
+  plugin_packages_ladspa_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/ladspa")));
+
+  audio_packages = with pkgs; [
+    mplayer 
+    jack2 
+    jack-example-tools
+    pavucontrol
+    alsaTools
+    alsaUtils
+    ardour
+    carla
+    vkeybd
+    audacity
+    a2jmidid
+    lilv
+  ];
+in
   { 
     options.nixos-config.sound = {
       enable = lib.mkOption {
@@ -44,19 +65,12 @@ let
   
     config = {
       rtnix.enable = true;
-      environment.systemPackages = with pkgs; 
-        (lib.mkIf config.nixos-config.sound.enable [
-          mplayer 
-          jack2 
-          jack-example-tools
-          pavucontrol
-          alsaTools
-          alsaUtils
-          ardour
-        ]);
+      environment.systemPackages = 
+        lib.mkIf config.nixos-config.sound.enable (audio_packages ++ lv2_plugin_packages ++ ladspa_plugin_packages);
 
       environment.variables = {
         LV2_PATH = plugin_packages_lv2_dirs;
+        LADSPA_PATH = plugin_packages_ladspa_dirs;
       };
     };
   } 
