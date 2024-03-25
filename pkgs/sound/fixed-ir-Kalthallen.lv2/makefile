@@ -5,4 +5,4 @@ all:
 
 install:
 	install -d ${out}/lib/lv2/
-	install fixed-ir-Kalthallen/fixed-ir-Kalthallen.lv2 ${out}/lib/lv2
+	cp -r fixed-ir-Kalthallen/fixed-ir-Kalthallen.lv2 ${out}/lib/lv2
