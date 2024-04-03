@@ -1,14 +1,14 @@
 { lib, stdenv, pkgs }:
 
 stdenv.mkDerivation rec {
-  pname = "tacklebox-lv2";
+  pname = "fps-faust-plugins-lv2";
   version = "1";
 
   src = pkgs.fetchFromGitHub {
     owner = "fps";
-    repo = "tacklebox.lv2";
+    repo = "fps-faust-plugins.lv2";
     rev = "master";
-    sha256 = "sha256-EuZ+Ztw80FeoV1IRw4GQm67jcerlPr+Oxjy1fgC1lPQ=";
+    sha256 = "sha256-lR98NVtvLVb9mYmwp50UkdzGtkK+MQWwgECMuWpq51Y=";
   };
 
   doCheck = false;
