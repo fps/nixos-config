@@ -11,8 +11,10 @@ stdenv.mkDerivation rec {
 
   configureFlags = [ 
     "--with-ladspa-prefix=${ladspa-sdk}" 
-    "--with-ladspa-plugin-dir=$out"
+    "--with-ladspa-plugin-dir=${outdir}/lib/ladspa"
   ];
+
+  outdir = placeholder "out";
 
   buildInputs =  with pkgs; [ gnumake ladspa-sdk ladspaH ];
 

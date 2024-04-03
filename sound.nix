@@ -57,6 +57,8 @@ let
     a2jmidid
     lilv
     fixed-ir-lv2
+    ladspa-sdk
+    dssi
   ];
 in
   { 
