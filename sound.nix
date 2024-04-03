@@ -39,9 +39,11 @@ let
   ladspa_plugin_packages = with pkgs; [
     caps
     blop-ladspa-plugins
-  ];
+  ] 
+  # Some LV2 plugins ship with LADSPA versions:
+  ++  lv2_plugin_packages;
 
-  plugin_packages_ladspa_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/ladspa")));
+  plugin_packages_ladspa_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach ladspa_plugin_packages (x: "${x}/lib/ladspa")));
 
   audio_packages = with pkgs; [
     mplayer 
