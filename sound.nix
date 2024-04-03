@@ -38,6 +38,7 @@ let
 
   ladspa_plugin_packages = with pkgs; [
     caps
+    blop-ladspa-plugins
   ];
 
   plugin_packages_ladspa_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/ladspa")));

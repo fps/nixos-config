@@ -21,6 +21,7 @@
       fixed-ir-lv2 = (pkgs.callPackage ./pkgs/sound/fixed-ir-lv2.nix {});
       fixed-ir-Kalthallen-lv2 = (pkgs.callPackage ./pkgs/sound/fixed-ir-Kalthallen-lv2.nix {});
       tacklebox-lv2 = (pkgs.callPackage ./pkgs/sound/tacklebox-lv2.nix {});
+      blop-ladspa-plugins = (pkgs.callPackage ./pkgs/sound/blop-ladspa-plugins.nix {});
     })
   ];
 } 
