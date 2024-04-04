@@ -1,7 +1,7 @@
 { lib, stdenv, pkgs }:
 
 stdenv.mkDerivation rec {
-  pname = "fixed-ir-lv2";
+  pname = "fixed-ir-Kalthallen-lv2";
   version = "1";
 
   src = ./fixed-ir-Kalthallen.lv2;

@@ -73,13 +73,16 @@ in
     };
   
     config = {
-      rtnix.enable = true;
+      rtnix.enable = lib.mkIf config.nixos-config.sound.enable true;
       environment.systemPackages = 
         lib.mkIf config.nixos-config.sound.enable (audio_packages ++ lv2_plugin_packages ++ ladspa_plugin_packages);
 
-      environment.variables = {
+      environment.variables = lib.mkIf config.nixos-config.sound.enable {
         LV2_PATH = plugin_packages_lv2_dirs;
         LADSPA_PATH = plugin_packages_ladspa_dirs;
       };
+
+      hardware.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
+      hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
     };
   } 
