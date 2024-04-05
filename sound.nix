@@ -62,6 +62,7 @@ let
     fixed-ir-lv2
     ladspa-sdk
     dssi
+    # rtneural
   ];
 in
   { 
