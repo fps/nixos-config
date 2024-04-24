@@ -23,6 +23,7 @@
       fps-faust-plugins-lv2 = (pkgs.callPackage ./pkgs/sound/fps-faust-plugins-lv2.nix {});
       blop-ladspa-plugins = (pkgs.callPackage ./pkgs/sound/blop-ladspa-plugins.nix {});
       neural-amp-modeler-lv2 = (pkgs.callPackage ./pkgs/sound/neural-amp-modeler-lv2.nix {});
+      aida-x-lv2 = (pkgs.callPackage ./pkgs/sound/aida-x.nix {});
       rtneural = (pkgs.callPackage ./pkgs/rtneural.nix {});
     })
   ];

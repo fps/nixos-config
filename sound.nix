@@ -32,6 +32,7 @@ let
     fixed-ir-Kalthallen-lv2
     fps-faust-plugins-lv2
     neural-amp-modeler-lv2
+    aida-x-lv2
     # melmatcheq-lv2
   ];
 
@@ -83,7 +84,7 @@ in
         LADSPA_PATH = plugin_packages_ladspa_dirs;
       };
 
-      hardware.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
-      hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
+      # hardware.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
+      # hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
     };
   } 
