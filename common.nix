@@ -22,6 +22,7 @@
       man-pages-posix 
       bash-completion 
       tmux
+      cpufrequtils
     ];
 
     nix.settings.tarball-ttl = 60;

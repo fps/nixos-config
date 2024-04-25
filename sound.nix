@@ -32,7 +32,7 @@ let
     fixed-ir-Kalthallen-lv2
     fps-faust-plugins-lv2
     neural-amp-modeler-lv2
-    aida-x-lv2
+    # aida-x-lv2
     # melmatcheq-lv2
   ];
 
