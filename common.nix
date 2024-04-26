@@ -23,6 +23,7 @@
       bash-completion 
       tmux
       cpufrequtils
+      lm_sensors
     ];
 
     nix.settings.tarball-ttl = 60;
