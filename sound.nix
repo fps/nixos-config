@@ -75,7 +75,6 @@ in
     };
   
     config = {
-      rtnix.enable = lib.mkIf config.nixos-config.sound.enable true;
       environment.systemPackages = 
         lib.mkIf config.nixos-config.sound.enable (audio_packages ++ lv2_plugin_packages ++ ladspa_plugin_packages);
 

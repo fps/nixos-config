@@ -24,6 +24,8 @@
       tmux
       cpufrequtils
       lm_sensors
+      iw
+      iptables
     ];
 
     nix.settings.tarball-ttl = 60;

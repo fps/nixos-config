@@ -15,6 +15,7 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  hardware.enableAllFirmware = true;
 
   nixpkgs.overlays = [
     (self: super: {
