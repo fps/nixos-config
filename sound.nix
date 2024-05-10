@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 let
-  pkgs_jack_fix = import /home/fps/src/nix/nixpkgs-jackfix {};
+  # pkgs_jack_fix = import /home/fps/src/nix/jackfix/nixpkgs {};
+  # pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
   lv2_plugin_packages = with pkgs; [
     mda_lv2
     swh_lv2
@@ -29,7 +30,7 @@ let
     calf
     ams-lv2
     # bollie-delay
-    # guitarix
+    guitarix
     fixed-ir-Kalthallen-lv2
     fps-faust-plugins-lv2
     neural-amp-modeler-lv2
@@ -50,13 +51,13 @@ let
 
   audio_packages = with pkgs; [
     mplayer 
-    pkgs_jack_fix.jack2 
-    pkgs_jack_fix.jack-example-tools
+    jack2 
+    jack-example-tools
     pavucontrol
     alsaTools
     alsaUtils
     ardour
-    pkgs_jack_fix.carla
+    carla
     vkeybd
     audacity
     a2jmidid

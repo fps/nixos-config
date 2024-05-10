@@ -14,18 +14,15 @@
 
     environment.systemPackages = with pkgs; 
       (lib.mkIf config.nixos-config.gui.enable [
-        arandr 
-        dmenu 
-				xclip
+        xclip
         gparted
-	      kate
+        kate
         firefox 
-				thunderbird 
+        thunderbird 
         signal-desktop
         vlc
         keepassxc
         xfce.xfce4-terminal 
-				lxterminal
         slic3r
       ]);
 
