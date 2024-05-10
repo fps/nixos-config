@@ -25,10 +25,5 @@
         xfce.xfce4-terminal 
         slic3r
       ]);
-
-    services.xserver.enable = config.nixos-config.gui.enable;
-    services.xserver.windowManager.i3.enable = config.nixos-config.gui.enable;
-    services.xserver.displayManager.sddm.enable = config.nixos-config.gui.enable;
-    services.xserver.libinput.enable = config.nixos-config.gui.enable;
   };
 } 
