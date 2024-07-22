@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   # pkgs_jack_fix = import /home/fps/src/nix/jackfix/nixpkgs {};
-  # pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
+  pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
   lv2_plugin_packages = with pkgs; [
     mda_lv2
     swh_lv2
@@ -36,6 +36,7 @@ let
     neural-amp-modeler-lv2
     # aida-x-lv2
     # melmatcheq-lv2
+    mod-utilities
   ];
 
   plugin_packages_lv2_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/lv2")));
@@ -51,13 +52,13 @@ let
 
   audio_packages = with pkgs; [
     mplayer 
-    jack2 
-    jack-example-tools
+    pkgs_master.jack2 
+    pkgs_master.jack-example-tools
     pavucontrol
     alsaTools
     alsaUtils
     ardour
-    carla
+    pkgs_master.carla
     vkeybd
     audacity
     a2jmidid
@@ -66,6 +67,8 @@ let
     ladspa-sdk
     dssi
     jalv
+    vmpk
+    vkeybd
     # ingen
     # rtneural
   ];
