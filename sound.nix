@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 let
   # pkgs_jack_fix = import /home/fps/src/nix/jackfix/nixpkgs {};
-  pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
+  pkgs_master = pkgs;
+  # pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
   lv2_plugin_packages = with pkgs; [
     mda_lv2
     swh_lv2

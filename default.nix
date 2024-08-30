@@ -28,6 +28,7 @@
       aida-x-lv2 = (pkgs.callPackage ./pkgs/sound/aida-x.nix {});
       rtneural = (pkgs.callPackage ./pkgs/rtneural.nix {});
       mod-utilities = (pkgs.callPackage ./pkgs/sound/mod-utilities.nix {});
+      jack2 = (pkgs.callPackage ./pkgs/sound/jackaudio {});
     })
   ];
 } 
