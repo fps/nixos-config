@@ -53,13 +53,13 @@ let
 
   audio_packages = with pkgs; [
     mplayer 
-    pkgs_master.jack2 
-    pkgs_master.jack-example-tools
+    jack2_db 
+    jack2_db_example_tools
     pavucontrol
     alsaTools
     alsaUtils
     ardour
-    pkgs_master.carla
+    carla_2_5_8
     vkeybd
     audacity
     a2jmidid
