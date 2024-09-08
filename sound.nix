@@ -80,6 +80,15 @@ in
         type = lib.types.bool;
         default = false;
       };
+
+      jack = {
+        enable = lib.mkOption { type = lib.types.bool; default = false; };
+        device = lib.mkOption { type = lib.types.str; default = "hw:USB"; };
+        user = lib.mkOption { type = lib.types.str; default = "fps"; };
+        period = lib.mkOption { type = lib.types.int; default = 96; };
+        nperiods = lib.mkOption { type = lib.types.int; default = 2; };
+        midiDriver = lib.mkOption { type = lib.types.str; default = "seq"; };
+      };
     };
   
     config = {
@@ -89,6 +98,14 @@ in
       environment.variables = lib.mkIf config.nixos-config.sound.enable {
         LV2_PATH = plugin_packages_lv2_dirs;
         LADSPA_PATH = plugin_packages_ladspa_dirs;
+      };
+
+      systemd.user.services.jack = lib.mkIf config.nixos-config.sound.jack.enable {
+        enable = true;
+        description = "Jack server";
+        serviceConfig = {
+          ExecStart = "${pkgs.jack2}/bin/jackd -S -P 90 -R -d alsa -d ${config.nixos-config.sound.jack.device} -p ${builtins.toString config.nixos-config.sound.jack.period} -n ${builtins.toString config.nixos-config.sound.jack.nperiods} -X ${config.nixos-config.sound.jack.midiDriver}";
+        };
       };
 
       # hardware.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
