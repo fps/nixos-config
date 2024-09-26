@@ -17,6 +17,7 @@
         arandr 
         dmenu 
         lxterminal
+        light
 #        xclip
 #        gparted
 #        kate
