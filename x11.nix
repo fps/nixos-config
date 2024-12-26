@@ -30,9 +30,9 @@
 #        slic3r
       ]);
 
-    services.xserver.enable = config.nixos-config.x11.enable;
-    services.xserver.windowManager.i3.enable = config.nixos-config.x11.enable;
-    services.displayManager.sddm.enable = config.nixos-config.x11.enable;
-    services.libinput.enable = config.nixos-config.x11.enable;
+    services.xserver.enable = lib.mkDefault config.nixos-config.x11.enable;
+    services.xserver.windowManager.i3.enable = lib.mkDefault config.nixos-config.x11.enable;
+    services.displayManager.sddm.enable = lib.mkDefault config.nixos-config.x11.enable;
+    services.libinput.enable = lib.mkDefault config.nixos-config.x11.enable;
   };
 } 
