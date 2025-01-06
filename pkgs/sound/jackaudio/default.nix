@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, pkg-config, python3Packages, makeWrapper
+{ lib, stdenv, fetchFromGitHub, pkg-config, python311Packages, makeWrapper
 , libsamplerate, libsndfile, readline, eigen, celt, db
 , wafHook
 
@@ -13,7 +13,7 @@
 }:
 
 let
-  inherit (python3Packages) python dbus-python;
+  inherit (python311Packages) python dbus-python;
   shouldUsePkg = pkg: if pkg != null && lib.meta.availableOn stdenv.hostPlatform pkg then pkg else null;
 
   libOnly = prefix == "lib";

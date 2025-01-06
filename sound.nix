@@ -10,7 +10,8 @@ let
     gxplugins-lv2
     gxmatcheq-lv2
     airwindows-lv2
-    rkrlv2 distrho
+    rkrlv2 
+    # distrho
     bshapr
     bchoppr
     plujain-ramp
@@ -29,7 +30,7 @@ let
     zam-plugins
     lsp-plugins
     calf
-    ams-lv2
+    # ams-lv2
     # bollie-delay
     guitarix
     fixed-ir-Kalthallen-lv2
@@ -56,8 +57,8 @@ let
     jack2_db 
     jack2_db_example_tools
     pavucontrol
-    alsaTools
-    alsaUtils
+    alsa-tools
+    alsa-utils
     ardour
     carla_2_5_8
     vkeybd
