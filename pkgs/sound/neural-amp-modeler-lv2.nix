@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   buildInputs =  with pkgs; [ pkg-config lv2 cmake ]; 
   # propagatedBuildInputs = with pkgs; [ lilv lv2 serd sord sratom];
 
-  cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" ];
+  cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" "-DUSE_NATIVE_ARCH=ON" ];
 
   installPhase = ''
     mkdir -p "$out"/lib/lv2
