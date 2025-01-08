@@ -27,6 +27,7 @@
       lm_sensors
       iw
       iptables
+      cifs-utils
     ];
 
     nix.settings.tarball-ttl = 60;
