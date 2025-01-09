@@ -33,5 +33,7 @@
     nix.settings.tarball-ttl = 60;
 
     services.fstrim.enable = lib.mkDefault true;
+
+    services.avahi.enable = true;
   };
 }
