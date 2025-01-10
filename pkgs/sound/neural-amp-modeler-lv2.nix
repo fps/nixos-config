@@ -10,10 +10,8 @@ stdenv.mkDerivation rec {
     url = "https://github.com/mikeoliphant/neural-amp-modeler-lv2.git";
     # rev = "main";
     fetchSubmodules = true;
-    # rev = "c4733d53bc25e939762e0b3472b370e480adb17c";
-    # sha256 = "sha256-05rZOLf7KkY6RwvnL6u0F1Hu+6X8b5N+dxqre6OWsuU=";
-    rev = "0.1.4";
-    sha256 = "sha256-5BOZOocZWWSWawXJFMAgM0NR0s0CbkzDVr6fnvZMvd0=";
+    rev = "c4733d53bc25e939762e0b3472b370e480adb17c";
+    sha256 = "sha256-05rZOLf7KkY6RwvnL6u0F1Hu+6X8b5N+dxqre6OWsuU=";
   };
 
   makeFlags = [ "PREFIX=$(out)" ];
@@ -23,7 +21,8 @@ stdenv.mkDerivation rec {
   buildInputs =  with pkgs; [ pkg-config lv2 cmake ]; 
   # propagatedBuildInputs = with pkgs; [ lilv lv2 serd sord sratom];
 
-  cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" "-DUSE_NATIVE_ARCH=ON" ];
+  # cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" "-DUSE_NATIVE_ARCH=ON" ];
+  cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" ];
 
   installPhase = ''
     mkdir -p "$out"/lib/lv2
