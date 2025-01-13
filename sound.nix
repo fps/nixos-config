@@ -38,7 +38,7 @@ let
     neural-amp-modeler-lv2
     # aida-x-lv2
     # melmatcheq-lv2
-    mod-utilities
+    # mod-utilities
   ];
 
   plugin_packages_lv2_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/lv2")));
