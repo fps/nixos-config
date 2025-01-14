@@ -31,6 +31,7 @@
       jack2_db = (pkgs.callPackage ./pkgs/sound/jackaudio {});
       jack2_db_example_tools = (pkgs.callPackage ./pkgs/sound/jackaudio/tools.nix { jack = jack2_db; });
       carla_2_5_8 = (pkgs.libsForQt5.callPackage ./pkgs/sound/carla { jack2 = self.jack2_db; fluidsynth = super.fluidsynth.override { libjack2 = jack2_db.override { prefix = "lib"; }; }; });
+      jack-wakeup = (pkgs.callPackage ./pkgs/sound/jack_wakeup.nix { jack2 = self.jack2_db; });
     })
   ];
 } 
