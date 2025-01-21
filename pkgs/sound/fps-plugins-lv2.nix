@@ -1,19 +1,19 @@
 { lib, stdenv, pkgs }:
 
 stdenv.mkDerivation rec {
-  pname = "fps-faust-plugins-lv2";
+  pname = "fps-plugins-lv2";
   version = "1";
 
   src = pkgs.fetchFromGitHub {
     owner = "fps";
-    repo = "fps-faust-plugins.lv2";
-    rev = "65f05b6e1a34e9752ac72a9dd5aad76899c24583";
-    sha256 = "sha256-0Nos/5q5FWjhpEhNDFDg/wQaPYzxmeNPW6vwty4PATY=";
+    repo = "fps-plugins.lv2";
+    rev = "d41374aeaacf07628990ca466ce4e5e74f870f49";
+    sha256 = "sha256-opKzB2K9hTu+nRWcc5lRiHw0cpfcdxm1dhhlouMk2Kc=";
   };
 
   doCheck = false;
 
-  buildInputs =  with pkgs; [ gnumake faust faust2lv2 which ];
+  buildInputs =  with pkgs; [ gnumake lv2 fftwFloat libsndfile pkg-config ];
 
   dontWrapQtApps = true;
 
