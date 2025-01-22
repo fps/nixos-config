@@ -37,6 +37,7 @@
         cryptsetup 
         borgbackup 
         syncthing
+        abduco
       ]);
   };
 } 
