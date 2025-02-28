@@ -28,6 +28,7 @@
       iw
       iptables
       cifs-utils
+      file
     ];
 
     nix.settings.tarball-ttl = 60;
