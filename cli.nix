@@ -38,6 +38,7 @@
         borgbackup 
         syncthing
         abduco
+        irssi
       ]);
   };
 } 
