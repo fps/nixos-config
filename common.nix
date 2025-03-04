@@ -38,5 +38,8 @@
     services.avahi.enable = true;
 
     services.pipewire.enable = lib.mkForce false;
+
+    zerovpn.serverName = "nionos";
+    zerovpn.serverHost = "zerovpn.dfdx.eu";
   };
 }
