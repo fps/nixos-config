@@ -18,6 +18,8 @@
         dmenu 
         lxterminal
         light
+        fuzzel
+        alacritty
 #        xclip
 #        gparted
 #        kate
@@ -34,5 +36,6 @@
     services.xserver.windowManager.i3.enable = lib.mkDefault config.nixos-config.x11.enable;
     services.displayManager.sddm.enable = lib.mkDefault config.nixos-config.x11.enable;
     services.libinput.enable = lib.mkDefault config.nixos-config.x11.enable;
+    programs.niri.enable = lib.mkDefault config.nixos-config.x11.enable;
   };
 } 
