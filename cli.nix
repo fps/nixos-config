@@ -39,6 +39,7 @@
         syncthing
         abduco
         irssi
+        nmap
       ]);
   };
 } 
