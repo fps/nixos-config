@@ -6,7 +6,7 @@
     networking.networkmanager.enable = true;
     networking.useDHCP = false;
 
-    services.openssh.enable = true;
+    services.openssh.enable = lib.mkDefault true;
 
     system.copySystemConfiguration = true;
 
