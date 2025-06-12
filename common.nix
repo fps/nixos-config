@@ -7,6 +7,9 @@
     networking.useDHCP = false;
 
     services.openssh.enable = lib.mkDefault true;
+    services.openssh.settings.X11Forwarding = lib.mkDefault true;
+
+    boot.tmp.cleanOnBoot = lib.mkDefault true;
 
     system.copySystemConfiguration = true;
 
