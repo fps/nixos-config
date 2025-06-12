@@ -29,6 +29,7 @@
       iptables
       cifs-utils
       file
+      abduco
     ];
 
     nix.settings.tarball-ttl = 60;
