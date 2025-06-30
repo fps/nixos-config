@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
       zerovpn 
       vim
+      helix
       git 
       htop 
       iotop 
@@ -35,12 +36,12 @@
       abduco
     ];
 
-		programs.bash = {
-			interactiveShellInit = ''
-				shopt -s histappend
-			'';
-		};
-		
+    programs.bash = {
+    	interactiveShellInit = ''
+    		shopt -s histappend
+    	'';
+    };
+    
 
     nix.settings.tarball-ttl = 60;
 
