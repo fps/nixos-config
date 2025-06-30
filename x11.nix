@@ -11,6 +11,9 @@
   config = {
     nixpkgs.config.allowUnfree = true;
     nixpkgs.overlays = [ ];
+    fonts.packages  = with pkgs; [
+      julia-mono
+    ];
 
     environment.systemPackages = with pkgs; 
       (lib.mkIf config.nixos-config.x11.enable [

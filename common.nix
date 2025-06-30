@@ -35,6 +35,13 @@
       abduco
     ];
 
+		programs.bash = {
+			interactiveShellInit = ''
+				shopt -s histappend
+			'';
+		};
+		
+
     nix.settings.tarball-ttl = 60;
 
     services.fstrim.enable = lib.mkDefault true;
