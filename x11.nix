@@ -40,6 +40,6 @@
     services.displayManager.sddm.enable = lib.mkDefault config.nixos-config.x11.enable;
     services.libinput.enable = lib.mkDefault config.nixos-config.x11.enable;
     programs.niri.enable = lib.mkDefault config.nixos-config.x11.enable;
-    services.xserver.desktopManager.plasma5.enable = lib.mkDefault config.nixos-config.x11.enable;
+    services.xserver.desktopManager.plasma6.enable = lib.mkDefault config.nixos-config.x11.enable;
   };
 } 

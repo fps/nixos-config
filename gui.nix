@@ -16,14 +16,14 @@
       (lib.mkIf config.nixos-config.gui.enable [
         xclip
         gparted
-        kate
+        # kate
         firefox 
         thunderbird 
         signal-desktop
         vlc
         keepassxc
         xfce.xfce4-terminal 
-        slic3r
+        # slic3r
       ]);
   };
 } 
