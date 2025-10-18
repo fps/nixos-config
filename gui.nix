@@ -24,6 +24,7 @@
         keepassxc
         xfce.xfce4-terminal 
         # slic3r
+        freerdp
       ]);
   };
 } 
