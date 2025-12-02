@@ -26,5 +26,10 @@
         # slic3r
         freerdp
       ]);
+
+    fonts.packages = with pkgs;
+      (lib.mkIf config.nixos-config.gui.enable [
+        julia-mono
+      ]);
   };
 } 
