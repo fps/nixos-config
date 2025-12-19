@@ -113,5 +113,7 @@ in
 
       # hardware.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
       # hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
+      services.pulseaudio.enable = lib.mkIf config.nixos-config.sound.enable true;
+      services.pulseaudio.package = pkgs.pulseaudioFull;
     };
   } 
