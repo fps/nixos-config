@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   pythonPath = with python3Packages; [
-    rdflib pyliblo
+    rdflib pyliblo3
   ] ++ lib.optional withFrontend pyqt5;
 
   buildInputs = [

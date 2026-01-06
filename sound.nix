@@ -8,7 +8,7 @@ let
     swh_lv2
     aether-lv2
     gxplugins-lv2
-    gxmatcheq-lv2
+    # gxmatcheq-lv2
     airwindows-lv2
     rkrlv2 
     # distrho
@@ -62,7 +62,7 @@ let
     alsa-tools
     alsa-utils
     ardour
-    carla_2_5_8
+    # carla_2_5_8
     vkeybd
     audacity
     a2jmidid
