@@ -53,5 +53,7 @@
 
     zerovpn.serverName = "nionos";
     zerovpn.serverHost = "zerovpn.dfdx.eu";
+
+    networking.firewall.logRefusedConnections = lib.mkDefault false;
   };
 }
