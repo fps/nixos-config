@@ -25,6 +25,7 @@
         xfce.xfce4-terminal 
         # slic3r
         freerdp
+        zotero
       ]);
 
     fonts.packages = with pkgs;
