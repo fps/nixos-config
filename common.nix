@@ -33,6 +33,7 @@
       iptables
       cifs-utils
       file
+      linuxPackages.cpupower
       abduco
     ];
 
@@ -47,7 +48,7 @@
 
     services.fstrim.enable = lib.mkDefault true;
 
-    services.avahi.enable = true;
+    # services.avahi.enable = true;
 
     services.pipewire.enable = lib.mkForce false;
 
