@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
 
-(pkgs.buildFHSUserEnv {
+(pkgs.buildFHSEnv {
   name = "julia-fhs-env";
   targetPkgs = pkgs: (with pkgs;
     [ udev
