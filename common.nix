@@ -46,6 +46,7 @@
     
 
     nix.settings.tarball-ttl = 60;
+    nixpkgs.config.allowUnfree = true;
 
     services.fstrim.enable = lib.mkDefault true;
 
