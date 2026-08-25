@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   outdir = placeholder "out";
 
-  buildInputs =  with pkgs; [ gnumake ladspa-sdk ladspa-headers ];
+  buildInputs =  with pkgs; [ gnumake ladspa-sdk ladspa-header ];
 
   meta = with lib; {
     platforms = platforms.all;

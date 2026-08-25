@@ -37,7 +37,7 @@ let
     fps-faust-plugins-lv2
     fps-plugins-lv2
     neural-amp-modeler-lv2
-    jack-wakeup
+    # jack-wakeup
     # aida-x-lv2
     # melmatcheq-lv2
     # mod-utilities
@@ -56,8 +56,8 @@ let
 
   audio_packages = with pkgs; [
     mplayer 
-    jack2_db 
-    jack2_db_example_tools
+    jack2 
+    jack-example-tools
     pavucontrol
     alsa-tools
     alsa-utils
