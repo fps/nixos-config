@@ -31,7 +31,7 @@ let
     lsp-plugins
     calf
     # ams-lv2
-    # bollie-delay
+    bolliedelayxt-lv2
     guitarix
     fixed-ir-Kalthallen-lv2
     fps-faust-plugins-lv2
