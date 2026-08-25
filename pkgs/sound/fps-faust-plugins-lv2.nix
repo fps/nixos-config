@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = pkgs.fetchFromGitHub {
     owner = "fps";
     repo = "fps-faust-plugins.lv2";
-    rev = "65f05b6e1a34e9752ac72a9dd5aad76899c24583";
-    sha256 = "sha256-0Nos/5q5FWjhpEhNDFDg/wQaPYzxmeNPW6vwty4PATY=";
+    rev = "a23357cde10582bb2738a0c7448e77d88b0aba89";
+    sha256 = "sha256-1OXjGrZ2HmMEuz1liT5vj6AxOt5Xmy8Rk1RXFR+uGDo=";
   };
 
   doCheck = false;

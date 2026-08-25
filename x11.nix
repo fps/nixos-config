@@ -20,7 +20,7 @@
         arandr 
         dmenu 
         lxterminal
-        light
+#         light
         fuzzel
         alacritty
 #        xclip

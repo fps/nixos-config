@@ -40,6 +40,7 @@
         abduco
         irssi
         nmap
+        yt-dlp
       ]);
   };
 } 

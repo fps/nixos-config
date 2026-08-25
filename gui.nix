@@ -22,7 +22,7 @@
         signal-desktop
         vlc
         keepassxc
-        xfce.xfce4-terminal 
+        xfce4-terminal 
         # slic3r
         freerdp
         zotero
