@@ -4,43 +4,43 @@ let
   pkgs_master = pkgs;
   # pkgs_master = import /home/fps/src/nix/master/nixpkgs {};
   lv2_plugin_packages = with pkgs; [
-    mda_lv2
-    swh_lv2
     aether-lv2
-    gxplugins-lv2
-    # gxmatcheq-lv2
+    # aida-x-lv2
     airwindows-lv2
-    rkrlv2 
-    # distrho
-    bshapr
-    bchoppr
-    plujain-ramp
-    mod-distortion
-    x42-plugins
-    # infamousPlugins 
-    mooSpace
-    boops
-    eq10q
-    talentedhack
-    artyFX
-    fverb
-    kapitonov-plugins-pack
-    fomp
-    molot-lite
-    zam-plugins
-    lsp-plugins
-    calf
     # ams-lv2
+    artyFX
+    bchoppr
     bolliedelayxt-lv2
-    guitarix
+    boops
+    bshapr
+    calf
+    # distrho
+    eq10q
     fixed-ir-Kalthallen-lv2
+    fomp
     fps-faust-plugins-lv2
     fps-plugins-lv2
-    neural-amp-modeler-lv2
+    fverb
+    guitarix
+    # gxmatcheq-lv2
+    gxplugins-lv2
+    # infamousPlugins 
     # jack-wakeup
-    # aida-x-lv2
+    kapitonov-plugins-pack
+    lsp-plugins
+    mda_lv2
     # melmatcheq-lv2
+    mod-distortion
     # mod-utilities
+    molot-lite
+    mooSpace
+    neural-amp-modeler-lv2
+    plujain-ramp
+    rkrlv2 
+    swh_lv2
+    talentedhack
+    x42-plugins
+    zam-plugins
   ];
 
   plugin_packages_lv2_dirs = lib.concatStrings (lib.intersperse ":" (lib.forEach lv2_plugin_packages (x: "${x}/lib/lv2")));
@@ -63,6 +63,7 @@ let
     alsa-utils
     ardour
     # carla_2_5_8
+    carla
     vkeybd
     audacity
     a2jmidid
